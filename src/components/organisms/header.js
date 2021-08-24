@@ -9,12 +9,12 @@ function Header() {
   const [open, setOpen] = React.useState(false);
 
   // メニューを開く関数
-  const handleDrawerOpen = function() {
+  const handleDrawerOpen = function () {
     setOpen(true);
   };
 
   // メニューを開く関数
-  const handleDrawerClose = function() {
+  const handleDrawerClose = function () {
     console.log('Handle Toggle')
     setOpen(false);
   };
@@ -36,10 +36,10 @@ function Header() {
         </Toolbar>
       </AppBar>
       <div>
-          <Drawer open={open} onClick={handleDrawerClose}>
-            <MenuItem>ログアウト</MenuItem>
-          </Drawer>
-      </div>      
+        <Drawer open={open} onClick={handleDrawerClose}>
+          <MenuItem>ログアウト</MenuItem>
+        </Drawer>
+      </div>
     </div>
   )
 }
