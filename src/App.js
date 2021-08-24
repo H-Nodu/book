@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div>
-      <PageRouter />
       <Header />
+      <PageRouter />
       <Button variant="contained" color="primary" onClick={event.click}>
         Hello World
       </Button>
