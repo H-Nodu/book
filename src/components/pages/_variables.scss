@@ -1,0 +1,9 @@
+// テーマカラー
+$site-theme-color: aquamarine;
+$dark-087: rgba(0, 0, 0, 0.87);
+
+$widthTablet: 720px;
+
+:export {
+  widthTablet: $widthTablet
+}

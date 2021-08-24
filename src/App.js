@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 
 // 各種インポート
 import Button from '@material-ui/core/Button';
