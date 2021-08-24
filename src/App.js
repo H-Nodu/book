@@ -1,12 +1,16 @@
 import './App.css';
 
 import Button from '@material-ui/core/Button';
+import Header from './components/header';
 
 function App() {
   return (
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+    <div>
+      <Header/>
+      <Button variant="contained" color="primary">
+        Hello World
+      </Button>
+    </div>
   );
 }
 
