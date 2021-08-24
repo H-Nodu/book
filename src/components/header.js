@@ -1,15 +1,7 @@
 import React from 'react'
-import clsx from 'clsx';
-import { AppBar, Toolbar, makeStyles, Typography, Drawer, MenuItem, IconButton } from '@material-ui/core'
-
+import { AppBar, Toolbar, Typography, Drawer, MenuItem, IconButton } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 
-
-const useStyles = makeStyles(() => ({
-  typographyStyles: {
-    flex: 1
-  }
-}));
 
 function Header() {
 
@@ -17,28 +9,24 @@ function Header() {
   const [open, setOpen] = React.useState(false);
 
   // メニューを開く関数
-  const handleDrawerOpen = () => {
+  const handleDrawerOpen = function() {
     setOpen(true);
   };
 
   // メニューを開く関数
-  const handleDrawerClose = () => {
+  const handleDrawerClose = function() {
     console.log('Handle Toggle')
     setOpen(false);
   };
 
-  const classes = useStyles();
-
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" style={{ color: "#e0f2f1", backgroundColor: "#6200ee" }}>
         <Toolbar>
           <IconButton
             color="inherit"
-            aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
@@ -47,12 +35,8 @@ function Header() {
           </Typography>
         </Toolbar>
       </AppBar>
-
       <div>
-          <Drawer 
-          open={open}
-          onClick={handleDrawerClose}
-          >
+          <Drawer open={open} onClick={handleDrawerClose}>
             <MenuItem>ログアウト</MenuItem>
           </Drawer>
       </div>      
